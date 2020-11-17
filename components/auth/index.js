@@ -12,10 +12,7 @@ import Landing from './Landing';
 
 export default function Auth(props) {
 	const AuthStack = createStackNavigator();
-	useEffect(() => {
-    	console.log("auth")
-    	console.log(props)
-  	}, [])
+
   	return (
   		<AuthStack.Navigator initialRouteName="Landing">
   			<AuthStack.Screen name="Landing" component={Landing}/>
