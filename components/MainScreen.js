@@ -8,6 +8,9 @@ import Auth from './auth';
 import Home from './account/Home'
 import AboutUs from './about/AboutUs'
 
+import ErrorScreen from './common/ErrorScreen'
+
+
 
 
 export default function MainScreen({navigation}) {
@@ -26,6 +29,7 @@ export default function MainScreen({navigation}) {
             <MainStack.Screen
               name="Auth"
               component={Auth}
+              path="auth"
               options={{
                 
             // When logging out, a pop animation feels intuitive
@@ -38,6 +42,7 @@ export default function MainScreen({navigation}) {
         )}
 
         <MainStack.Screen name="About" component={AboutUs}/>
+        <MainStack.Screen name="404" component={ErrorScreen}/>
 
       </MainStack.Navigator>
     );

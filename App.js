@@ -11,6 +11,8 @@ import {AuthProvider} from './components/auth/AuthProvider'
 import ModalScreen from './components/ModalScreen'
 import MainScreen from './components/MainScreen'
 
+import {config} from './components/routing/link-config'
+
 export default function App() {
 
 
@@ -19,7 +21,7 @@ export default function App() {
 
   return(
     <AuthProvider>
-      <NavigationContainer>
+      <NavigationContainer linking={config} fallback={<Text>Loading...</Text>}>
         <RootStack.Navigator mode="modal" headerMode="none">
           <RootStack.Screen name="Main" component={MainScreen} />
           <RootStack.Screen name="Modal" component={ModalScreen} />

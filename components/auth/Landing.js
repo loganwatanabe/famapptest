@@ -1,10 +1,12 @@
 import React, {useState, useContext} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-
+import { Link } from '@react-navigation/native';
 import {AuthContext} from './AuthProvider'
 
+import * as Linking from 'expo-linking';
 
-export default function LoadingScreen({navigation}) {
+
+export default function Landing({navigation}) {
 	const { user, setUser } = useContext(AuthContext);
   return (
     <View>
@@ -13,6 +15,7 @@ export default function LoadingScreen({navigation}) {
         onPress={() => navigation.navigate('Main', { screen: 'Auth', params: { screen: 'Login' }})}
         title="Go to Login"
       />
+      <Link to={'/login'}>Go to Login</Link>
       <Button
         onPress={() => navigation.navigate('Modal')}
         title="Open Modal"

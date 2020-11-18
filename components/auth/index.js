@@ -15,8 +15,8 @@ export default function Auth(props) {
 
   	return (
   		<AuthStack.Navigator initialRouteName="Landing">
-  			<AuthStack.Screen name="Landing" component={Landing}/>
-  			<AuthStack.Screen name="Login" component={Login}/>
+  			<AuthStack.Screen name="Landing" path="landing" component={Landing}/>
+  			<AuthStack.Screen name="Login" path="login" component={Login}/>
   		</AuthStack.Navigator>
   	);
 }
