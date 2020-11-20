@@ -8,12 +8,12 @@ const config = {
     screens: {
       Main: {
 		screens: {
+			Landing: '',
 			Auth: {
 				screens:{
 					Login: 'login',
-		      		Landing: '',
 				}
-		      },
+		    },
 		    Account:{
 		     	screens: {
 		     		Home: 'home'

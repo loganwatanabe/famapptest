@@ -1,9 +1,8 @@
 import React, {useState, useContext} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { Link } from '@react-navigation/native';
-import {AuthContext} from './AuthProvider'
+import {AuthContext} from '../auth/AuthProvider'
 
-import * as Linking from 'expo-linking';
 
 
 export default function Landing({navigation}) {

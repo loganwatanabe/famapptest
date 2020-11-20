@@ -3,7 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Login from './Login';
-import Landing from './Landing';
 
 
 
@@ -14,8 +13,7 @@ export default function Auth(props) {
 	const AuthStack = createStackNavigator();
 
   	return (
-  		<AuthStack.Navigator initialRouteName="Landing">
-  			<AuthStack.Screen name="Landing" path="landing" component={Landing}/>
+  		<AuthStack.Navigator initialRouteName="Landing" screenOptions={{headerShown: false}}>
   			<AuthStack.Screen name="Login" path="login" component={Login}/>
   		</AuthStack.Navigator>
   	);
